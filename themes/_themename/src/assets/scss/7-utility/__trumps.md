@@ -1,0 +1,1 @@
+Utils/Trumps - utility funuctions that trump everything else

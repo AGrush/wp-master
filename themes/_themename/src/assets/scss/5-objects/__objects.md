@@ -1,0 +1,1 @@
+Objects – Classes for page structure typically following the OOCSS methodology

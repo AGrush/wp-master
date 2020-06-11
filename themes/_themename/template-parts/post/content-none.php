@@ -1,0 +1,2 @@
+<!-- translate & echo the string with _e or including escape with esc_html_e-->
+<p><?php echo apply_filters('_themename_no_posts_filter', esc_html__('Sorry, no posts matched your query bro.', '_themename')); ?></p>

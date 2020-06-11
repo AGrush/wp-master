@@ -1,0 +1,1 @@
+Generic – CSS resets which might include Eric Meyer’s reset, Normalize.css, or your own batch of code

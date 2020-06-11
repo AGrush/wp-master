@@ -1,0 +1,43 @@
+{
+  "name": "bubdrops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --prod",
+    "final": "gulp final --prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-git": "^2.10.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-zip": "^5.0.0",
+    "run-sequence": "^2.2.1",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1",
+    "vinyl": "^2.2.0"
+  }
+}
