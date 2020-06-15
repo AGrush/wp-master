@@ -226,3 +226,10 @@ Metadata is the extreanous data associated with a post
     - Text Domain, Dunction Prefix, Name = _themename
     - Copy the class-tgm-plugin-activation.php into lib folder
     - Update include-plugins.php file
+
+
+# build the final theme + plugins
+
+> npm run bundle (in plugin folder)
+> npm run bundle (in theme folder)
+> /final bundle is all.
