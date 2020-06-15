@@ -18,7 +18,9 @@ require_once('lib/navigation.php');
 //delete-posts
 require_once('lib/delete-post.php');
 
-//metaboxes
-require_once('lib/metaboxes.php');
+//metaboxes - coming from a plugin now
+//require_once('lib/metaboxes.php');
+
+require_once('lib/include-plugins.php');
 
 ?>

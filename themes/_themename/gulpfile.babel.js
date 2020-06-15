@@ -51,6 +51,12 @@ const paths = {
         src: ['src/assets/**/*', '!src/assets/{images,js,scss}', '!src/assets/{images,js,scss}/**/*'],
         dest: 'dist/assets'
     },
+    plugins: {
+        src: [
+          "../../plugins/_themename-metaboxes/packaged/*"
+        ],
+        dest: ["lib/plugins"]
+      },
     package: {
         //the files we are zipping when exporting into 'final' zip file
         src: ['**/*', '!.vscode', '!node_modules{,/**}', '!final{,/**}', '!src{,/**}', '!.babelrc', '!.gitignore', '!gulpfile.babel.js', '!package.json', '!package-lock.json'],
@@ -98,9 +104,17 @@ export const images = () => {
 
 //gulp task to move our files to dist folder
 export const copy = () => {
-    return gulp.src(paths.other.src)
+    return gulp
+        .src(paths.other.src)
         .pipe(gulp.dest(paths.other.dest));
 }
+
+export const copyPlugins = () => {
+    return gulp
+        .src(paths.plugins.src)
+        .pipe(gulp.dest(paths.plugins.dest));
+  };
+  
 
 //gulp task to watch for changes
 export const watch = () => {
@@ -195,12 +209,22 @@ export default dev;
 //build into dist folder (use --prod flag to minimise etc.)
 export const build = gulp.series(
     clean,
-    gulp.parallel(styles, scripts, images, copy)
+    gulp.parallel(styles, scripts, images, copy),
+    copyPlugins
 );
 //zip up assets into final folder
 export const compress = () => {
-    return gulp.src(paths.package.src)
-        .pipe(gulpreplace('_themename', info.name))
+    return gulp
+        .src(paths.package.src)
+        //dont replace zip file names (it corrupts them for some reason)
+        //gulpif resolves truthy/falsy values.. and can have a function inside, also it gets passed the file object.
+        .pipe(
+            gulpif(
+              file => file.relative.split(".").pop() !== "zip",
+              gulpreplace("_themename", info.name)
+            )
+          )
+        
         .pipe(zip(`${info.name}.zip`))
         .pipe(gulp.dest(paths.package.dest));
 }

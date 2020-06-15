@@ -201,3 +201,28 @@ https://www.bynicolas.com/code/wordpress-nonce/
 
 Metadata is the extreanous data associated with a post
 - such as custom fields
+
+### Plugins
+
+* SETUP
+
+- To initialise plugin put the index.php info file in your plugins folder.
+- add the following to restrict access to this file:
+  ```php
+  if( !defined('WPINC')) {
+    die;
+  }
+  ```
+- Move all your code from the functions.php file to the index.php file of the theme (or other file and include it in index)
+- Move the package.json and gulp file and remove anything to do with broswerSync
+- run npm install
+- Change the text-domain of the theme code to the text domain of the plugin
+- Create js/scss folder structure and make enqueue-assets.php file which includes those scss js files (from the dist folder)
+- (you can prefix your functions with the themename + plugin name if u need, we not doing that here)
+- run npm run bundle, get the zip file and put in into your theme inside a folder somewhere, this can then be installed when theme is installed.
+
+- make sure the plugins are installed automatically when installing your theme with TGM Plugin ACtivation
+    - [TGM Plugin ACtivation Domnloads](http://tgmpluginactivation.com/download/)
+    - Text Domain, Dunction Prefix, Name = _themename
+    - Copy the class-tgm-plugin-activation.php into lib folder
+    - Update include-plugins.php file
