@@ -28,7 +28,7 @@
 13. navigate to _themename folder and run npm install
 14. run npm install --global gulp-cli
 15. we don't need to find all '_themename' and replace with website name, 'gulp final' task will do that when we run it.
-16. run `gulp` to start the dev environment
+16. run 'npm start' to start the dev environment
   
 ### setup in wp-admin
 
@@ -40,7 +40,7 @@
 
 ## notes
 
-- functions that start with get_permalink.. need to be echoed, the_permalink doesnt.
+- functions that start with GET_permalink.. need to be echoed, THE_permalink doesnt.
 - how to console.log:
 ```php
 <pre>
@@ -232,4 +232,6 @@ Metadata is the extreanous data associated with a post
 
 > npm run bundle (in plugin folder)
 > npm run bundle (in theme folder)
-> /final bundle is all.
+> /final zip file is the finished product
+
+

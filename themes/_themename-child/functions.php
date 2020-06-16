@@ -3,9 +3,9 @@
 
 
 //override the parent function
-function _themename_post_meta() {
-echo 'hsfdfsdxx';
-}
+// function _themename_post_meta() {
+// echo 'hsfdfsdxx';
+// }
 
 
 //how we enqueue stylesheet in child theme to override parent styles
@@ -20,6 +20,16 @@ function _themename_child_scripts() {
     '1.0.0',
     'all');
 }
+
+//add_action('pre_get_posts','function_to_add');
+function function_to_add($query) {
+  if($query->is_main_query()){
+    $query->set('posts_per_page', 2);
+  }
+}
+
+
+
 
 add_action('_themename_after_pagination', 'after_pagination' );
 add_action('_themename_after_pagination', 'after_pagination2');
