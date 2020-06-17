@@ -27,6 +27,40 @@ function _themename_customize_register($wp_customize) {
     }
   ));
 
+  /*##################  SINGLE SETTINGS ########################*/
+
+  
+  $wp_customize->add_section('_themename_single_blog_options', array(
+    'title' => esc_html__( 'Single Blog Options', '_themename' ),
+    'description' => esc_html__( 'You can change single blog options from here.', '_themename' ),
+    //if this function retruns true this section will appear, otherwise not.
+    'active_callback' => '_themename_show_single_blog_section'
+  ));
+
+  $wp_customize->add_setting('_themename_display_author_info', array(
+      'default' => true,
+      'transport' => 'postMessage',
+      'sanitize_callback' => '_themename_sanitize_checkbox'
+  ));
+
+  $wp_customize->add_control('_themename_display_author_info', array(
+      'type' => 'checkbox',
+      'label' => esc_html__( 'Show Author Info', '_themename' ),
+      'section' => '_themename_single_blog_options'
+  ));
+
+  //true or false, anything else is invalid.
+  function _themename_sanitize_checkbox( $checked ) {
+      return (isset($checked) && $checked === true) ? true : false;
+  }
+
+  function _themename_show_single_blog_section() {
+      global $post;
+      
+      //is_single can be true for other custom post types so we make sure its also a 'post' post type
+      return is_single() && $post->post_type === 'post';
+  }
+
 
   /*################## GENERAL SETTINGS ########################*/
 

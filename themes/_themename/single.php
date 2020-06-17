@@ -23,8 +23,17 @@
                     <?php while(have_posts()) { ?>
                     <!--| this has to be here or there is an infinite loop -->
                         <?php the_post(); ?>            <!-- add second argument here to allow for different post formats (wp feature) -->
+
                         <?php get_template_part( 'template-parts/post/content' ); ?>
-                        <?php get_template_part( 'template-parts/single/author' ); ?>
+                      
+                        <?php 
+                          //if customizer 'setting' to display author info is on (default = true) display author info.
+                          if(get_theme_mod('_themename_display_author_info', true)){
+                            get_template_part( 'template-parts/single/author' ); 
+                          }
+                        ?>
+
+                        <?php get_template_part( 'template-parts/single/navigation' ); ?>
 
                     <?php } ?>
                 <?php } else { ?>
@@ -42,3 +51,4 @@
     </div>
 </div>
 
+<?php get_footer(); ?>

@@ -14,8 +14,11 @@
         <?php if(is_single( )) { ?>
             <div class="c-post__content">
                 <!-- full content if we are in single page -->
-                <?php the_content(); 
-                wp_link_pages();
+                <?php 
+                    the_content(); 
+                    //wp_link_pages takes arguments if you want to change html markup for it.
+                    //this creates extra pages for extra 'read more' tags in editor
+                    wp_link_pages();
                 ?>
             </div>
         <?php } else { ?>
