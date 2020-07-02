@@ -19,7 +19,21 @@ function _themename_assets(){
 
     //include jquery in the array of dependancies here, (dependancies will load b4 script)
     wp_enqueue_script( '_themename-scripts', get_template_directory_uri() . '/dist/assets/js/bundle.js', array('jquery'), '1.0.0', true );
+
+    //JS ability to reply to comments without reloading & new page, only load on single page, only if comments are enabled, if nested comments are enabled
+    if( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
 }
+
+//enqueue css only in gutenberg
+add_action( 'enqueue_block_editor_assets', '_themename_block_editor_assets' );
+function _themename_block_editor_assets() {
+    wp_enqueue_style( '_themename-block-editor-styles', get_template_directory_uri() . '/dist/assets/css/editor.css', array(), '1.0.0', 'all' );
+}
+
+
+
 
 
 //load admin page css AND js assets

@@ -17,29 +17,8 @@
     <div class="o-row">
         <div class="o-row__column o-row__column--span-12 o-row__column--span-<?php echo $layout === 'sidebar' ? '8' : '12' ?>@medium">
             <main role="main">
-                <!-- the path of the template to include (get_template_part will search in the child theme for 'loop-index' first then 'loop' then in parent theme) -->
-                <!--| the post loop/ the have_posts here is dependant on the URL -->
-                <?php if(have_posts()) { ?>
-                    <?php while(have_posts()) { ?>
-                    <!--| this has to be here or there is an infinite loop -->
-                        <?php the_post(); ?>            <!-- add second argument here to allow for different post formats (wp feature) -->
-
-                        <?php get_template_part( 'template-parts/post/content' ); ?>
-                      
-                        <?php 
-                          //if customizer 'setting' to display author info is on (default = true) display author info.
-                          if(get_theme_mod('_themename_display_author_info', true)){
-                            get_template_part( 'template-parts/single/author' ); 
-                          }
-                        ?>
-
-                        <?php get_template_part( 'template-parts/single/navigation' ); ?>
-
-                    <?php } ?>
-                <?php } else { ?>
-                    <!-- no posts found template, content-none modifier for no posts -->
-                    <?php get_template_part( 'template-parts/post/content', 'none' ); ?>
-                <?php } ?>
+                <!-- the path of the template to include (get_template_part will search in the child theme for 'loop-single' first then 'loop' then in parent theme) -->
+                <?php get_template_part( 'loop', 'single' ); ?>
             </main>
         </div>
         <?php if( $layout === 'sidebar') { ?>

@@ -18,6 +18,9 @@ function _themename_theme_support(){
         'flex-height' => true,
         'flex-width' => true
     ));
+
+    //gutenberg
+    add_theme_support('align-wide');
 }
 
 //this function (& after_setup_theme hook) is called when each page is loaded after theme is initialised.

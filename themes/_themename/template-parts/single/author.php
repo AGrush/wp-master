@@ -1,3 +1,5 @@
+<!-- INSIDE SINGLE PAGE //if customizer 'setting' to display author info is on (default = true) display author info. -->
+
 <div class="c-post-author u-margin-bottom-20">
     <h2 class="u-screen-reader-text"><?php esc_attr_e( 'About The Author', '_themename' ); ?></h2>
     <?php

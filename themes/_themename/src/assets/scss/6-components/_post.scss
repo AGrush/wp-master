@@ -102,11 +102,13 @@
             margin: 0 auto;
         }
     }
+    //gutenberg
     .alignwide {
         margin-left: -100px;
         margin-right: -100px;
         max-width: calc(50rem + 200px);
     }
+    //gutenberg
     .alignfull {
         margin-left: calc(-12.5rem + 0.625rem);
         margin-right: calc(-12.5rem + 0.625rem);
@@ -122,6 +124,7 @@
         } 
     }
 }
+//gutenberg 
 .wp-block-embed.is-type-video {
     position: relative;
     padding-bottom: 56.25%;

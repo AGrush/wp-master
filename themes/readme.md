@@ -235,3 +235,12 @@ Metadata is the extreanous data associated with a post
 > /final zip file is the finished product
 
 
+
+
+## CREATE NEW PLUGIN
+
+1. duplicate _themename-metaboxes
+2. rename _themename-NEWNAME
+3. 
+
+

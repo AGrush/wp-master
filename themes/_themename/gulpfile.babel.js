@@ -36,7 +36,7 @@ const PRODUCTION = yargs.argv.prod;
 //this paths object make sure we dont have paths all over the place below
 const paths = {
     styles: {
-        src: ['src/assets/scss/bundle.scss', 'src/assets/scss/admin.scss', 'src/assets/scss/login.scss'],
+        src: ['src/assets/scss/bundle.scss', 'src/assets/scss/admin.scss', 'src/assets/scss/login.scss', "src/assets/scss/editor.scss"],
         dest: 'dist/assets/css'
     },
     images: {
