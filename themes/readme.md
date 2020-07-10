@@ -23,6 +23,14 @@
  6. CHECK download & import file attachments
  7. Click submit & ur DONE
 
+[_themename_button]text[/_themename_button]
+
+[_themename_slider]
+
+[_themename_slide id="" /]
+
+[/_themename_slider]
+
 ### setup npm
 
 13. navigate to _themename folder and run npm install
@@ -250,3 +258,5 @@ this plugin will have multiple shortcodes inside that we can expand with more sh
 
 ### THE PLUGINS FOLDER IS FOR THE LIVE WORK ON THE SHORTCODE/PLUGIN, THE PLUGINS ZIP IS FOR FINAL BUNDLING
 
+### install slick slider shortcode
+1. npm install slick-carousel --save
