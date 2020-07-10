@@ -12,6 +12,7 @@ Text Domain: _themename-_pluginname
 Domain Path: /languages
 */
 
+//if ( ! defined( 'WPINC' ) ) die; and if ( ! defined( 'ABSPATH' ) ) exit; add an extra layer of security by preventing any direct access to your plugin file.
 if( !defined('WPINC')) {
   die;
 }

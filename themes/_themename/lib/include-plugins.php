@@ -1,3 +1,4 @@
+<!-- ask user to activate the plugins below using this tgm plugin activator code -->
 <?php
 
 require_once get_template_directory() . '/lib/class-tgm-plugin-activation.php';
@@ -17,16 +18,17 @@ function _themename_register_required_plugins() {
             'force_activation' => false,
             'force_deactivation' => false,
         )
-        // ,
-        // array(
-        //     'name' => '_themename shortcodes',
-        //     'slug' => '_themename-shortcodes',
-        //     'source' => get_template_directory_uri() . '/lib/plugins/_themename-shortcodes.zip',
-        //     'required' => true,
-        //     'version' => '1.0.0',
-        //     'force_activation' => false,
-        //     'force_deactivation' => false,
-        // ),
+        ,
+        array(
+            'name' => '_themename shortcodes',
+            'slug' => '_themename-shortcodes',
+            'source' => get_template_directory_uri() . '/lib/plugins/_themename-shortcodes.zip',
+            'required' => true,
+            'version' => '1.0.0',
+            'force_activation' => false,
+            'force_deactivation' => false,
+        )
+        //,
         // array(
         //     'name' => '_themename post types',
         //     'slug' => '_themename-post-types',

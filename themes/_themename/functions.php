@@ -21,6 +21,7 @@ require_once('lib/delete-post.php');
 //metaboxes - coming from a plugin now
 //require_once('lib/metaboxes.php');
 
+//ask to activate necessary plugins we've built using tgm plugin activator here, add new plugin paths in here
 require_once('lib/include-plugins.php');
 
 //change comments markup

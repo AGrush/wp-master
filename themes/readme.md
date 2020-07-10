@@ -241,6 +241,10 @@ Metadata is the extreanous data associated with a post
 
 1. duplicate _themename-metaboxes
 2. rename _themename-NEWNAME
-3. 
+3. change name of plugin in package.json
+4. inside gulp file, rename admin.scss to bundle.scss if applicable and same for js
+5. edit enqueue-assets.php remove admin stuff
+6. change index.php 
+7. add the new plugins source in the main theme gulpfile so its bundled automatically into the theme
 
 

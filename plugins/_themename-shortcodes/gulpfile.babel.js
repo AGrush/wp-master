@@ -17,7 +17,7 @@ const PRODUCTION = yargs.argv.prod;
 
 const paths = {
     styles: {
-        src: ['src/assets/scss/admin.scss'],
+        src: ['src/assets/scss/bundle.scss'],
         dest: 'dist/assets/css'
     },
     images: {
@@ -25,7 +25,7 @@ const paths = {
         dest: 'dist/assets/images'
     },
     scrips: {
-        src: ['src/assets/js/admin.js'],
+        src: ['src/assets/js/bundle.js'],
         dest: 'dist/assets/js'
     },
     other: {
