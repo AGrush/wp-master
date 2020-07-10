@@ -237,7 +237,8 @@ Metadata is the extreanous data associated with a post
 
 
 
-## CREATE NEW PLUGIN
+## CREATE NEW PLUGIN: SHORTCODES
+this plugin will have multiple shortcodes inside that we can expand with more shortcodes later.
 
 1. duplicate _themename-metaboxes
 2. rename _themename-NEWNAME
@@ -247,4 +248,5 @@ Metadata is the extreanous data associated with a post
 6. change index.php 
 7. add the new plugins source in the main theme gulpfile so its bundled automatically into the theme
 
+### THE PLUGINS FOLDER IS FOR THE LIVE WORK ON THE SHORTCODE/PLUGIN, THE PLUGINS ZIP IS FOR FINAL BUNDLING
 

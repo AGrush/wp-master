@@ -17,7 +17,7 @@ if( !defined('WPINC')) {
   die;
 }
 
-//when you define shortcodes you must add them in an action called 'init', when wp is initialised
+//when you define shortcodes you must add them in an action called 'init', just after wp initialises.
 function _themename__pluginname_init() {
   include_once('includes/shortcodes/button/button.php');
 }
