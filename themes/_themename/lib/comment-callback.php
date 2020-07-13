@@ -1,6 +1,6 @@
-<!-- custom comment html -->
-<?php
 
+<?php
+//<!-- custom comment html -->
 //the comment, args = the other args on wp_list_comments & default ones, depth is the depth
 function _themename_comment_callback( $comment, $args, $depth) {
     $tag = ( $args['style'] === 'div') ? 'div' : 'li';

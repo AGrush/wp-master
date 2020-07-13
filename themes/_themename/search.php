@@ -1,4 +1,3 @@
-<!-- search page -->
 <?php get_header(); ?>
 <div class="o-container u-margin-bottom-40">
     <div class="o-row">

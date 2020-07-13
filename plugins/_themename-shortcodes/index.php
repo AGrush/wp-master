@@ -20,6 +20,7 @@ if( !defined('WPINC')) {
 //when you define shortcodes you must add them in an action called 'init', just after wp initialises.
 function _themename__pluginname_init() {
   include_once('includes/shortcodes/button/button.php');
+  include_once('includes/shortcodes/slider/slider.php');
 }
 add_action('init', '_themename__pluginname_init');
 

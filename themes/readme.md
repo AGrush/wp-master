@@ -23,13 +23,6 @@
  6. CHECK download & import file attachments
  7. Click submit & ur DONE
 
-[_themename_button]text[/_themename_button]
-
-[_themename_slider]
-
-[_themename_slide id="" /]
-
-[/_themename_slider]
 
 ### setup npm
 

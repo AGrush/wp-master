@@ -1,7 +1,7 @@
-<!-- same as index.php apart from an archive header 'the_archive_title' -->
+
 
 <?php get_header("myheader") ?>
-<div class="o-container u-margin-bottom-40">
+<div class="o-container u-margin-bottom-40"><!-- same as index.php apart from an archive header 'the_archive_title' -->
     <div class="o-row">
         <!-- the only difference on this page to index page at the moment is that it has the archive title & description at the top: -->
         <div class="o-row__column o-row__column--span-12">

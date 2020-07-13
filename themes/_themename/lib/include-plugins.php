@@ -1,5 +1,5 @@
-<!-- ask user to activate the plugins below using this tgm plugin activator code -->
 <?php
+//ask user to activate the plugins below using this tgm plugin activator code
 
 require_once get_template_directory() . '/lib/class-tgm-plugin-activation.php';
 
